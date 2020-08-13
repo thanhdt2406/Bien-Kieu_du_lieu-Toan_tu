@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="check()">Check a & b</button>
+<p id="result"></p>
+
+<script>
+    function check() {
+        let num1 = prompt("Nhập a: ");
+        let num2 = prompt("Nhập b: ");
+        let a = parseInt(num1);
+        let b = parseInt(num2);
+
+        if (a % b == 0)
+            document.getElementById("result").innerHTML = a + " là bội của " + b;
+        else
+            document.getElementById("result").innerHTML = a + " không là bội của " + b;
+    }
+</script>
+</body>
+</html>
