@@ -1,11 +1,14 @@
 function Diem(){
-    let inputPhysical = prompt("Nhập điểm môn Vật lý");
-    let inputChemistry = prompt("Nhập điểm môn Hoá học");
-    let inputBiology = prompt("Nhập điểm môn Sinh học");
+    let physical = parseFloat(prompt("Nhập điểm môn Vật lý"));
+    let chemistry = parseFloat(prompt("Nhập điểm môn Hoá học"));
+    let biology = parseFloat(prompt("Nhập điểm môn Sinh học"));
 
-    let physical = parseFloat(inputPhysical);
-    let chemistry = parseFloat(inputChemistry);
-    let biology = parseFloat(inputBiology);
+    while(physical<0 || physical>10||chemistry<0||chemistry>10||biology<0||biology>10){
+        alert("Error. Try again!");
+        physical = parseFloat(prompt("Nhập điểm môn Vật lý"));
+        chemistry = parseFloat(prompt("Nhập điểm môn Hoá học"));
+        biology = parseFloat(prompt("Nhập điểm môn Sinh học"));
+    }
     let sum = physical+chemistry+biology;
     let avg = sum/3;
 
